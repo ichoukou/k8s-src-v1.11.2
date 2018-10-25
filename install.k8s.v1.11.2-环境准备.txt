@@ -1,5 +1,5 @@
 1.初始化环境
-## 主机名
+##1.1 主机名
 
 设置永久主机名称，然后重新登录:
 
@@ -33,7 +33,7 @@ CentOS:
 ``` bash
 $ sudo yum install -y epel-release
 $ sudo yum install -y conntrack ipvsadm ipset jq sysstat curl iptables libseccomp
-```
+$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2 net-tools conntrack-tools wget vim  ntpdate libseccomp libtool-ltdl 
 
 Ubuntu:
 
@@ -49,6 +49,7 @@ $ sudo apt-get install -y conntrack ipvsadm ipset jq sysstat curl iptables libse
 ``` bash
 $ sudo systemctl stop firewalld
 $ sudo systemctl disable firewalld
+$systemctl stop firewalld && systemctl disable firewalld
 $ sudo iptables -F && sudo iptables -X && sudo iptables -F -t nat && sudo iptables -X -t nat
 $ sudo sudo iptables -P FORWARD ACCEPT
 ```
@@ -73,7 +74,14 @@ sed -i "s/\/dev\/mapper\/rhel-swap/\#\/dev\/mapper\/rhel-swap/g" /etc/fstab
 sed -i "s/\/dev\/mapper\/centos-swap/\#\/dev\/mapper\/centos-swap/g" /etc/fstab
 
 ``` bash
-$ sudo sed -i '/swap /s/^\(.*\)$/#\1/g' /etc/fstab
+匹配行的行首添加，添加在同行
+[root@1MDocker ~]# sed '/World/s/^/#/' myfile
+#Hello World
+sed -i 's/.*swap.*/#&/' /etc/fstab
+
+#/dev/mapper/VolGroup-lv_swap swap
+
+$ sudo sed -i '/swap/s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
 ## 关闭 SELinux
@@ -82,6 +90,14 @@ $ sudo sed -i '/swap /s/^\(.*\)$/#\1/g' /etc/fstab
 
 ``` bash
 $ sudo setenforce 0
+sed -i "s/^SELINUX=enforcing/SELINUX=disabled/g" /etc/sysconfig/selinux 
+
+sed -i "s/^SELINUX=enforcing/SELINUX=disabled/g" /etc/sysconfig/selinux 
+sed -i "s/^SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config 
+sed -i "s/^SELINUX=permissive/SELINUX=disabled/g" /etc/sysconfig/selinux
+sed -i "s/^SELINUX=permissive/SELINUX=disabled/g" /etc/selinux/config  
+
+
 $ grep SELINUX /etc/selinux/config 
 SELINUX=disabled
 ```
@@ -111,6 +127,22 @@ EOF
 $ sudo cp kubernetes.conf  /etc/sysctl.d/kubernetes.conf
 $ sudo sysctl -p /etc/sysctl.d/kubernetes.conf
 
+1. vi /etc/security/limits.d/90-nproc.conf 
+注释掉 * soft nproc 1024
+sed -i 's/.*nproc.*/#&/' /etc/security/limits.d/90-nproc.conf 
+
+2. vi /etc/security/limits.conf
+
+echo "* soft nofile 1048576" >> /etc/security/limits.conf
+echo "* hard nofile 1048576" >> /etc/security/limits.conf
+echo "* soft nproc 1048576"  >> /etc/security/limits.conf
+echo "* hard nproc 1048576"  >> /etc/security/limits.conf
+echo "* soft  memlock  unlimited"  >> /etc/security/limits.conf
+echo "* hard memlock  unlimited"  >> /etc/security/limits.conf
+echo " net.core.somaxconn = 262144" >> /etc/sysctl.conf
+
+
+
 
 ## 加载内核模块
 
@@ -128,9 +160,22 @@ $ sudo timedatectl set-timezone Asia/Shanghai
 $ # 将当前的 UTC 时间写入硬件时钟
 $ sudo timedatectl set-local-rtc 0
 
-$ # 重启依赖于系统时间的服务
-$ sudo systemctl restart rsyslog 
-$ sudo systemctl restart crond
+$时间同步
+yum install -y ntpdate
+
+编辑vi /etc/crontab
+0 1 * * * root ntpdate 192.168.104.91;/sbin/hwclock -w
+说明：每天凌晨1点从ntp服务器192.168.4.183同步时间。
+
+systemctl enable ntpdate.service
+echo '*/30 * * * * /usr/sbin/ntpdate time7.aliyun.com >/dev/null 2>&1' > /tmp/crontab2.tmp
+crontab /tmp/crontab2.tmp
+systemctl start ntpdate.service
+
+ 重启定时命令：
+/etc/init.d/crond restart
+
+
 ```
 
 

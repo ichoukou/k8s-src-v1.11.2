@@ -1,0 +1,64 @@
+Shell实现判断进程是否存在并重新启动脚本
+
+2016年09月12日 15:12:24 栎枫 阅读数：18263
+版权声明：本文为博主原创文章，未经博主允许不得转载。	https://blog.csdn.net/superbfly/article/details/52513765
+简洁版：
+
+    #! /bin/bash
+    # author caoxin
+    # time 2012-10-10 
+    # program : 判断进行是否存在，并重新启动
+
+
+    function check(){
+      count=`ps -ef |grep $1 |grep -v "grep" |wc -l`
+      #echo $count
+      if [ 0 == $count ];then
+        nohup python /runscript/working/$1 &
+      fi
+    }
+
+    check behaviors.py
+
+详细版：
+
+
+    #!/bin/bash
+    #
+
+    #调用关闭jboss进程脚本
+    stopMethodServer.sh
+
+    #打印出当前的jboss进程：grep jboss查询的jboss进程，grep -v "grep" 去掉grep进程
+    jmsThread=`ps -ef | grep gdms | grep jboss | grep -v "grep"`
+    echo $jmsThread
+
+    #查询jboss进程个数：wc -l 返回行数
+    count=`ps -ef | grep gdms | grep jboss | grep -v "grep" | wc -l`
+    echo $count
+
+    sec=7
+    #开始一个循环，以判断进程是否关闭
+
+    for var in 1 2
+    do
+     if [ $count -gt 0 ]; then
+      #若进程还未关闭，则脚本sleep几秒
+      echo sleep $sec second the $var time, the JMS thread is still alive
+      sleep $sec
+     else
+      #若进程已经关闭，则跳出循环
+      echo "break"
+      break
+     fi
+    done
+
+    #if [ $count -eq 0 ]; then
+    # echo "nohup startMethodServer.sh &"
+    # nohup startMethodServer.sh &
+    #else
+    # echo "It's better to check the thread!!!"
+    #fi
+
+    #调用启动脚本
+    nohup startMethodServer.sh &
