@@ -1,0 +1,9 @@
+- hosts: k8s-all 
+  remote_user: root
+  vars:
+    disk:  /dev/sdd #磁盘名字
+    partition:  /dev/sdd #分区磁盘名字
+    mountDir: /data/db #挂载点
+  roles:
+    - mount-xfs
+

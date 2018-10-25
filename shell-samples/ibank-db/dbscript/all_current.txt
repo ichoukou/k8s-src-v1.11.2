@@ -1,0 +1,6 @@
+DROP_ALL_TABLE		CMD	drop_all_table_dba.sh
+DROP_ALL_SEQ		CMD	drop_all_seq_dba.sh
+CREATE_ALL_TABLE	DBA	sql/INIT/ibank-table-all-based.sql
+CREATE_ALL_INDEX	DBA	sql/INIT/ibank-index-all-based.sql
+Product(数据初始化)	CMD	all_data_init.sh
+Test(数据初始化)	CMD	all_data_test_init.sh

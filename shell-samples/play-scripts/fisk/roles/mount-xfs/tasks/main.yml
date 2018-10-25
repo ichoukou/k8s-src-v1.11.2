@@ -1,0 +1,28 @@
+---
+
+#- name: Yum Install
+#  yum: name="{{ item }}" state=latest   #下载ansible 依赖
+#  with_items:
+#      - libselinux-python
+#  become: yes
+#  become_method: su
+
+- name: Echo Disk 
+  shell: echo "hello" || /bin/true
+
+- name: New Disk Partition
+  #执行 disk.sh 参数{{ disk }} 对应xfs.yml的disk:/dev/vdb #磁盘名字
+  script: disk.sh "{{ disk }}" 
+  become: yes
+  become_method: su
+
+- name: New Disk Format(xfs)
+  filesystem: fstype=xfs dev="{{ partition }}" #分区格式并格式化
+  become: yes
+  become_method: su
+
+- name: New Disk Mount # 挂载磁盘并写入/etc/fstab
+  mount: name="{{ mountDir }}" src="{{ partition }}" fstype=xfs state=mounted
+  become: yes
+  become_method: su
+

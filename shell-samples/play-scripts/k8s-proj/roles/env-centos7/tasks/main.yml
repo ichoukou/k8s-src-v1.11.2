@@ -1,0 +1,26 @@
+---
+
+- name: 防火墙监测
+  script: base.firewalld.sh
+  become: yes
+  become_method: su
+  when: is_firedwalld
+
+- name: 桥接设置
+  script: base.bridge.sh
+  become: yes
+  become_method: su
+  when: is_bridge
+
+- name: 桥接设置结果
+  shell: "cat /proc/sys/net/bridge/bridge-nf-call-ip6tables"
+  register: bridge_checkout
+
+- name: 检查桥接设置
+  debug: var=bridge_checkout verbosity=0
+
+- name: 关闭Linux保护设置
+  script: base.selinux.sh
+  become: yes
+  become_method: su
+

@@ -1,0 +1,5 @@
+---
+
+#- name: Yum Install
+- name: Echo Disk
+  shell: ls -l /home

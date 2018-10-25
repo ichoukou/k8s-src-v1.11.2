@@ -1,0 +1,25 @@
+########
+[k8s-all]
+1md.k8s
+2md.k8s
+3md.k8s
+1sd.k8s
+2sd.k8s
+3sd.k8s
+
+
+###etcd nodes###
+[etcd]
+1md.k8s
+2md.k8s
+3md.k8s
+
+[k8s-master]
+1md.k8s
+2md.k8s
+3md.k8s
+
+[k8s-slave]
+1sd.k8s
+2sd.k8s
+3sd.k8s

@@ -1,0 +1,22 @@
+---
+
+- name: 删除基本环境目录
+  file: path={{k8s_env_dir}}  state=absent owner=root group=root mode=064
+
+- name: 删除安装包与脚本目录
+  file: path={{k8s_setup_dir}}  state=absent owner=root group=root mode=064
+
+- name: 创建基本环境目录
+  file: path={{k8s_env_dir}}  state=directory owner=root group=root mode=064
+
+- name: 创建BIN目录
+  file: path={{k8s_bin_dir}}  state=directory owner=root group=root mode=064
+
+- name: 创建配置目录
+  file: path={{k8s_cfg_dir}}  state=directory owner=root group=root mode=064
+
+- name: 创建LOG目录
+  file: path={{k8s_log_dir}}  state=directory owner=root group=root mode=064
+
+- name: 创建安装包与脚本目录
+  file: path={{k8s_setup_dir}}  state=directory owner=root group=root mode=064

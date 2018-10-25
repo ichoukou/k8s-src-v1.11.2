@@ -1,0 +1,9 @@
+###Docker存储
+docker_storage_options: "/data/registry/docker"
+
+###私有仓储地址
+private_insecure_registry: "10.0.0.13:5000"
+
+###阿里云加速器
+aliyuncs: "https://0bj9ecdc.mirror.aliyuncs.com"
+

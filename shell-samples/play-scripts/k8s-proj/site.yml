@@ -1,0 +1,27 @@
+- hosts: k8s-all
+  gather_facts: no
+  remote_user: root
+  vars:
+    #disk:  /dev/sdd #磁盘名字
+    #partition:  /dev/sdd #分区磁盘名字
+    #mountDir: /data/db #挂载点
+  roles:
+    - env-centos7 #基本环境，防火墙关闭、桥接问题等
+    - mk-path #项目的基本路径创建
+
+- hosts: etcd
+  remote_user: root
+  roles:
+    - etcd
+
+- hosts: k8s-slave
+  tasks:
+    - name: 显示集群的UUID和IP
+      debug:
+        msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
+    
+    - name: 显示节点信息
+      debug:
+        var: hostvars[inventory_hostname]
+        verbosity: 2
+

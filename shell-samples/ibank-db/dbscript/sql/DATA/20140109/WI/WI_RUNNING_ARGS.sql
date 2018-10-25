@@ -1,0 +1,4 @@
+﻿INSERT INTO "WI_RUNNING_ARGS" ("ARG_ID", "ARG_NAME", "ARG_VALUE") VALUES ('01', '上架是否审核', 'Y');
+INSERT INTO "WI_RUNNING_ARGS" ("ARG_ID", "ARG_NAME", "ARG_VALUE") VALUES ('02', '删除是否审核', 'Y');
+INSERT INTO "WI_RUNNING_ARGS" ("ARG_ID", "ARG_NAME", "ARG_VALUE") VALUES ('04', '关闭订单时间（小时）', '48');
+commit;

@@ -1,0 +1,61 @@
+---
+#- name: 获取OS变量
+#  include_vars: "{{ item }}"
+#  with_first_found:
+#    - files:
+#      - "{{ ansible_distribution|lower }}-
+#            {{ ansible_distribution_version|lower|replace('/', '_') }}.yml"
+#      - "{{ ansible_distribution|lower }}-
+#            {{ ansible_distribution_release }}.yml"
+#      - "{{ ansible_distribution|lower }}-
+#          {{ ansible_distribution_major_version|lower|replace('/', '_') }}.yml"
+#      - "{{ ansible_distribution|lower }}.yml"
+#      - "{{ ansible_os_family|lower }}.yml"
+#      - defaults.yml
+#      paths:
+#      - ../vars
+#      skip: true
+
+- name: 更新RPM包
+  command: "yum install -y epel-release"
+
+- name: 配置Docker库repos
+  template:
+    src: "ai.docker.repo.j2"
+    dest: "/etc/yum.repos.d/ai.docker.repo"
+  when: ansible_distribution in ["CentOS","RedHat"] and is_ali_repos and not is_atomic
+
+- name: 配置Docker库repos
+  template:
+    src: "docker.repo.j2"
+    dest: "/etc/yum.repos.d/docker.repo"
+  when: ansible_distribution in ["CentOS","RedHat"] and is_ali_repos and not is_atomic
+
+#- name: 配置Docker库repos
+#  template:
+#    src: "epel.repo.j2"
+#    dest: "/etc/yum.repos.d/epel.repo"
+#  when: ansible_distribution in ["CentOS","RedHat"] and is_ali_repos and not is_atomic
+
+- name: 显示Docker库repos信息
+  command: "yum repolist"
+  register: yum_repolist_check
+
+- name: 显示Docker库repos信息检查
+  debug: var=yum_repolist_check.stdout_lines verbosity=0
+
+- name: 查看Docker版本
+  command: "yum list docker showduplicates"
+  register: yum_list_docker_check
+  
+- name: 查看Docker版本检查
+  debug: var=yum_list_docker_check.stdout_lines verbosity=0
+
+#- name: 验证Docker版本
+#    You need at least docker version >= 1.12 for resolvconf_mode=docker_dns
+#  command: "docker version -f '{{ '{{' }}.Client.Version{{ '}}' }}'"
+#  register: docker_version
+#  failed_when: docker_version.stdout|version_compare('1.12', '<')
+#  changed_when: false
+
+

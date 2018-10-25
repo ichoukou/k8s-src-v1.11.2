@@ -1,0 +1,20 @@
+docker_vesion: '1.12.6'
+
+docker_package_info:
+  pkgs:
+
+docker_repo_key_info:
+  repo_keys:
+
+docker_repo_info:
+  repos:
+
+docker_dns_servers_strict: yes
+
+ansible_distribution: "CentOS"
+
+is_atomic: false
+
+is_ali_repos: true
+
+aliyuncs: "https://0bj9ecdc.mirror.aliyuncs.com"

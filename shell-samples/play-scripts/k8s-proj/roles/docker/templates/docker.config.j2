@@ -1,0 +1,8 @@
+
+###Docker
+{% if docker_storage_options is defined %}
+
+OPTIONS='--selinux-enabled=false --insecure-registry {{private_insecure_registry}}'
+
+{% endif %}
+

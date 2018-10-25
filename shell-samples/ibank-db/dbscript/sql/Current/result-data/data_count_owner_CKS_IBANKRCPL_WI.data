@@ -1,0 +1,165 @@
+SP2-0734: unknown command beginning "old   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   2:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   2:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   8:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   8:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old  19:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  19:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "'PROMPT"AL..." - rest of line ignored.
+SP2-0042: unknown command "QUERY_SQL" - rest of line ignored.
+SP2-0027: Input is too long (> 2499 characters) - line ignored
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_CONTACT_LIST"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_EP_RECORD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_ERRLOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_FILE_INCOMING"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_FILE_INCOMING_HEADER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_FILE_INCOMING_RECORD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_FILE_OUTGOING_HEADER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_FILE_OUTGOING_RECORD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_MANAGER_ACT_LIST"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_ORDER_LIST"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_CATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_DEF"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_DEF_CONT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_FORM"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_INFO"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_PRIC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_SECU"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PRODUCT_TMPL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_PROVIDER_INFO"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_REFUND_LIST"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_REQUEST_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_RESPONSE_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_RISK_PROVIDER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is WI_RUNNING_ARGS"
+
+  COUNT(*)
+----------
+         0
+

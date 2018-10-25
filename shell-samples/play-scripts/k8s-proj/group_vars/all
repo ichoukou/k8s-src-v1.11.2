@@ -1,0 +1,24 @@
+---
+
+##########################
+###Linux系统基本设置######
+##########################
+is_firedwalld: true
+is_bridge: true
+
+###安装环境目录
+k8s_env_dir: /opt/kubernetes
+k8s_bin_dir: /opt/kubernetes/bin
+k8s_cfg_dir: /opt/kubernetes/cfg
+k8s_log_dir: /opt/kubernetes/log
+k8s_setup_dir: /data/soft/local/v1.6.7
+
+###docker相关参数
+# 重试次数，比如下载失败等情况
+retry_stagger: 5
+
+###Docker安装目录
+docker_systemd: "/usr/lib/systemd/system"
+
+###docker配置路径
+docker_conf_dir: "/etc/sysconfig"

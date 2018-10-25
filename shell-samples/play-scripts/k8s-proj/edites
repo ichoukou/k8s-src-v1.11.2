@@ -1,0 +1,4 @@
+k8s-v1.6.7/hosts
+k8s-v1.6.7/site.yml
+k8s-v1.6.7/roles/docker/tasks/main.yml
+k8s-v1.6.7/roles/docker/handlers/main.yml

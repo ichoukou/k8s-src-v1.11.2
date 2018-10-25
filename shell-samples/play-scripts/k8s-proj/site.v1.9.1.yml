@@ -1,0 +1,27 @@
+- hosts: k8s-all
+  gather_facts: no
+  strategy: debug
+  remote_user: root
+  roles:
+    - env-centos7 #基本环境，防火墙关闭、桥接问题等
+
+
+- hosts: k8s-master
+  tasks:
+    - name: 显示集群的UUID和IP
+      debug:
+        msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
+    
+    - name: 显示节点信息
+      debug:
+        var: hostvars[inventory_hostname]
+        verbosity: 2
+
+- hosts: k8s-all 
+  strategy: debug
+  gather_facts: no
+  roles:
+   - repos.d #目前为centos版本的yum库安装与检查
+   - docker  #安装Docker
+
+

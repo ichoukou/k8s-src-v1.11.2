@@ -1,0 +1,4 @@
+﻿--新增及修改错误码回滚
+--删除数据
+delete from cp_error_info_comp where ERROR_CODE in ('LNMI7055','LNMI7056','LNMI7057','LNMI7058','LNMI7059','LNMI7060','LNMI7061','LNMI7062','LNMI7063','LNMI7064','LNCM7039','LNCM7040','LNCM7041','LNCM7042','LNMI8029');
+commit;

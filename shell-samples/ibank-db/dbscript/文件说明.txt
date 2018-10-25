@@ -1,0 +1,44 @@
+投产周期之前的run.txt和run_test.txt为20140313的所有增量脚本，原则上不会再86环境上执行。
+
+周投产任务列表：
+run_product_current_task.txt,全部脚本
+run_product_current_task_list,执行脚本
+for itask in $(cat run_product_current_task_log.txt); do  echo $itask; echo ${itask##*/}>>run_product_current_task.txt; done;
+grep -i EXEC_ run_product_current_task.txt>>run_product_current_task_list.txt
+
+可投产的增量脚本全量，即以前没有投产的脚本
+run_product_current_exec.txt
+rm -fr run_product_current_exec.txt
+
+for i in $(ls run_no_product*.txt) ; do echo $i; cat $i >>run_product_current_exec.txt; done
+
+run_product_current_exec.txt，本次投产可以执行的脚本，它包括之前各个投产周期中没有投产的脚本，当投产之后，在相应的run_no_product做减少
+	再次投产，它为run_no_product_0314_0320_xishi.txt、run_no_product_0315_0328_banruo与run_add.txt之和
+run_product_current_revert.txt,本次投产可以回滚的脚本，它包括之前各个投产周期中没有投产的脚本，当投产之后，在相应的run_no_product做减少
+
+投产周期结束
+run_add.txt变为run_add_0315_0328_banruo.txt
+run_revert.txt变为run_revert_0315_0328_banruo.txt
+
+1.西施版本,86增量的基线脚本
+run_add_0314_0320_xishi, 为一周脚本执行结果的累积，基线为西施版本
+run_revert_3014_0320_xishi.txt, 为一周脚本执行回滚脚本的累积，基线为西施版本
+
+run_product_0314_0320_xishi.txt，投到86环境的执行脚本，增量脚本，全量为基线，增量与全量基线一致。
+run_product_revert_0314_0320_xishi.txt，投到86环境的回滚脚本，增量脚本
+
+run_no_product_0314_0320_xishi.txt，本周期没有投产到86环境上的脚本，在后续版本投产时，此处的脚本相应减少
+run_no_product_revert_0314_0320_xishi.txt，本周期没有投产到86环境上的脚本，在后续版本投产时，此处的脚本相应减少
+
+2.般若版本
+run_add_0315_0328_banruo,为一周脚本执行结果的累积，基线为西施版本
+run_revert_0315_0328_banruo,为一周脚本执行回滚脚本的累积，基线为西施版本
+
+run_product_0315_0328_banruo.txt,般若的投到86环境的执行脚本，它可能包括以前投产周期的脚本
+run_product_revert_0315_0328_banruo.txt,般若的投到86环境的混滚脚本，它可能包括以前投产周期的脚本
+
+run_no_product_0315_0328_banruo.txt，本周期执行过（111）环境，但是没有投产到86环境的执行脚本。动态脚本
+run_no_product_revert_0315_0328_banruo.txt，本周期执行过（111）环境，但是没有投产到86环境的回滚脚本。,动态脚本
+
+run_product_task_use_0328_bannuo.txt,本周投产任务列表
+run_product_task_dba_0328_bannuo.txt，本周投产任务列表

@@ -1,0 +1,10 @@
+cloudnil/kube-apiserver-amd64:v1.6.7
+cloudnil/kube-controller-manager-amd64:v1.6.7
+cloudnil/kube-scheduler-amd64:v1.6.7
+cloudnil/kube-proxy-amd64:v1.6.7
+cloudnil/k8s-dns-kube-dns-amd64:1.14.4
+cloudnil/k8s-dns-dnsmasq-nanny-amd64:1.14.4
+cloudnil/k8s-dns-sidecar-amd64:1.14.4
+cloudnil/etcd-amd64:3.0.17
+cloudnil/kubernetes-dashboard-amd64:v1.6.1
+cloudnil/pause-amd64:3.0

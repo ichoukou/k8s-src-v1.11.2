@@ -1,0 +1,710 @@
+Xshell for Xmanager Enterprise 4 (Build 0180)
+Copyright (c) 2002-2011 NetSarang Computer, Inc. All rights reserved.
+
+Type `help' to learn how to use Xshell prompt.
+Xshell:\> 
+
+Connecting to 10.229.175.117:22...
+Connection established.
+Escape character is '^@]'.
+
+Last login: Thu Jan  9 15:30:25 2014 from 10.232.98.96
+[oracle@HQxTAL3A ~]$ ls -l
+total 124
+-rw-r--r-- 1 oracle oinstall    64 Dec 30 21:13 afiedt.buf
+drwxr-xr-x 7 oracle oinstall  4096 Jan  8 21:31 cks
+drwxr-xr-x 2 oracle oinstall  4096 Dec 25 14:33 data
+-rw-r--r-- 1 oracle oinstall     1 Dec 12 17:08 demo1.bad
+-rw-r--r-- 1 oracle oinstall   187 Dec 12 17:08 demo1.ctl
+-rw-r--r-- 1 oracle oinstall  1676 Dec 12 17:08 demo1.log
+drwxr-xr-x 2 oracle oinstall  4096 Apr 14  2013 Desktop
+drwxr-xr-x 3 oracle oinstall  4096 Jun  8  2013 exp
+-rw-r--r-- 1 oracle oinstall 68207 Apr 17  2013 find.txt
+drwxr-xr-x 3 oracle oinstall  4096 Apr 16  2013 ftp
+-rw-r--r-- 1 oracle oinstall  2656 Dec 11 15:54 lock.sql
+-rw-r--r-- 1 oracle oinstall   479 Dec 10 19:06 login.sql
+-rw-r--r-- 1 oracle oinstall  4391 Dec  6 19:36 show_space.sql
+drwxr-xr-x 2 oracle oinstall  4096 Jan  8 22:45 yibo
+[oracle@HQxTAL3A ~]$ cd cks
+[oracle@HQxTAL3A cks]$ ls -l
+total 28
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:33 dumpdir
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:32 export
+drwxr-xr-x 2 oracle oinstall  4096 Jan  6 20:59 import
+drwxr-xr-x 6 oracle oinstall 12288 Jan  9 16:19 runner
+drwxr-xr-x 6 oracle oinstall  4096 Jan  8 21:31 xiaoh
+[oracle@HQxTAL3A cks]$ pwd
+/home/oracle/cks
+[oracle@HQxTAL3A cks]$ 
+[oracle@HQxTAL3A cks]$ l
+total 28
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:33 dumpdir
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:32 export
+drwxr-xr-x 2 oracle oinstall  4096 Jan  6 20:59 import
+drwxr-xr-x 6 oracle oinstall 12288 Jan  9 16:19 runner
+drwxr-xr-x 6 oracle oinstall  4096 Jan  8 21:31 xiaoh
+[oracle@HQxTAL3A cks]$ ls -l
+total 28
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:33 dumpdir
+drwxr-xr-x 2 oracle oinstall  4096 Jan  9 15:32 export
+drwxr-xr-x 2 oracle oinstall  4096 Jan  6 20:59 import
+drwxr-xr-x 6 oracle oinstall 12288 Jan  9 16:19 runner
+drwxr-xr-x 6 oracle oinstall  4096 Jan  8 21:31 xiaoh
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd siaoh
+-bash: cd: siaoh: No such file or directory
+[oracle@HQxTAL3A cks]$ cd xiaoh
+[oracle@HQxTAL3A xiaoh]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd dumpdir
+[oracle@HQxTAL3A dumpdir]$ l
+total 4690660
+-rw-r--r-- 1 oracle oinstall       1477 Jan  6 21:22 export_CP_GROUP_RESOURCE_20140106.log
+-rw-r--r-- 1 oracle oinstall       1457 Jan  6 20:53 export_CP_MSG_TEMPLATE_20140106.log
+-rw-r--r-- 1 oracle oinstall       1520 Jan  6 21:24 export_CP_WEB_RESOURCE_20140106.log
+-rw-r--r-- 1 oracle oinstall       1211 Jan  9 15:33 export_TEMP_CP_MENU_20140109.log
+-rw-r--r-- 1 oracle oinstall      27418 Jan  3 22:02 ibank_20140103.log
+-rw-r--r-- 1 oracle oinstall      27499 Jan  4 19:40 ibank_20140104.log
+-rw-r--r-- 1 oracle oinstall      27894 Jan  8 19:52 ibank_20140108.log
+-rw-r----- 1 oracle oinstall     155648 Jan  6 21:22 ibank.CP_GROUP_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall     167936 Jan  6 21:24 ibank.CP_WEB_RESOURCE_20140106.dmp
+-rw-r--r-- 1 oracle oinstall      26503 Jan  3 10:09 ibankdbo_20140103.log
+-rw-r--r-- 1 oracle oinstall      26345 Jan  4 14:26 ibankdbo_20140104.log
+-rw-r----- 1 oracle oinstall     253952 Jan  6 20:53 ibankdbo_CP_MSG_TEMPLATE_20140106.dmp
+-rw-r----- 1 oracle oinstall 2384781312 Jan  3 10:09 ibankdbo_withdata_20140103.dmp
+-rw-r----- 1 oracle oinstall 1407381504 Jan  4 14:26 ibankdbo_withdata_20140104.dmp
+-rw-r----- 1 oracle oinstall     126976 Jan  6 21:21 ibanktest.CP_GROUP_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall     147456 Jan  6 21:24 ibanktest.CP_WEB_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall      94208 Jan  9 15:33 ibankwebusr.TEMP_CP_MENU_20140109.dmp
+-rw-r----- 1 oracle oinstall  189140992 Jan  3 22:02 ibank_withdata_20140103.dmp
+-rw-r----- 1 oracle oinstall  188665856 Jan  3 17:41 ibank_withdata_20140103.dmp.old
+-rw-r----- 1 oracle oinstall  185753600 Jan  4 09:08 ibank_withdata_2014010409.dmp
+-rw-r----- 1 oracle oinstall  191938560 Jan  4 19:40 ibank_withdata_20140104.dmp
+-rw-r----- 1 oracle oinstall  253501440 Jan  8 19:52 ibank_withdata_20140108.dmp
+-rw-r--r-- 1 oracle oinstall      27140 Jan  4 09:37 test1_20140104.log
+-rw-r--r-- 1 oracle oinstall      27464 Jan  4 19:46 test2_20140104.log
+-rw-r----- 1 oracle oinstall     131072 Jan  6 21:21 test2.CP_GROUP_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall     155648 Jan  6 21:23 test2.CP_WEB_RESOURCE_20140106.dmp
+-rw-r--r-- 1 oracle oinstall      26582 Jan  4 14:54 test3_20140104.log
+-rw-r----- 1 oracle oinstall     126976 Jan  6 21:21 test3.CP_GROUP_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall     135168 Jan  6 21:23 test3.CP_WEB_RESOURCE_20140106.dmp
+-rw-r--r-- 1 oracle oinstall      26582 Jan  4 15:13 test4_20140104.log
+-rw-r----- 1 oracle oinstall     131072 Jan  6 21:21 test4.CP_GROUP_RESOURCE_20140106.dmp
+-rw-r----- 1 oracle oinstall     143360 Jan  6 21:24 test4.CP_WEB_RESOURCE_20140106.dmp
+[oracle@HQxTAL3A dumpdir]$ cd .
+[oracle@HQxTAL3A dumpdir]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd export
+[oracle@HQxTAL3A export]$ l
+total 24
+-rw-r--r-- 1 oracle oinstall 118 Dec 31 14:37 create_directory.sql
+-rwxr-xr-x 1 oracle oinstall 160 Dec 24 10:24 export_db_nodata.sh
+-rwxr-xr-x 1 oracle oinstall 149 Dec 24 10:47 export_db_withdata.sh
+-rwxr-xr-x 1 oracle oinstall 151 Jan  8 19:51 export_ibank_withdata.sh
+-rwxr-xr-x 1 oracle oinstall 137 Jan  6 21:19 export_table.sh
+-rw-r--r-- 1 oracle oinstall  25 Dec 24 10:03 readme.txt
+[oracle@HQxTAL3A export]$ vi *.sh
+4 files to edit
+[oracle@HQxTAL3A export]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd runer
+-bash: cd: runer: No such file or directory
+[oracle@HQxTAL3A cks]$ cd runner
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dbuser.txt             get_all_index.sh              import_data.sh*            import_ol_all.sh*           import_to_ibanktest_nodata.
+alldbuseronly.txt     drop_all_table.sh*     grant_select_to_readonly.sh*  import_investment_all.sh*  import_payment_all.sh*      killutf*                   
+alldbuser.txt         dumpfile_nodata.txt    grant_select_to_user.sh*      import_lb_all.sh*          import_public_all.sh*       killutf.c                  
+create_all_table.sh*  gen_all_parttition.sh  import_add_data.sh*           import_ln_all.sh*          import_to_ibank_nodata.sh*  launch.ksh*                
+[oracle@HQxTAL3A runner]$ 
+[oracle@HQxTAL3A runner]$ 
+[oracle@HQxTAL3A runner]$ pwd
+/home/oracle/cks/runner
+[oracle@HQxTAL3A runner]$ l
+total 140
+-rw-r--r--  1 oracle oinstall  347 Jan  7 22:51 2014010722.txt
+-rw-r--r--  1 oracle oinstall   34 Jan  6 21:22 alldbuseronly.txt
+-rw-r--r--  1 oracle oinstall   74 Jan  8 14:27 alldbuser.txt
+-rwxr-xr-x  1 oracle oinstall  123 Jan  4 16:51 create_all_table.sh
+-rw-r--r--  1 oracle oinstall   16 Jan  7 19:48 dbuser.txt
+-rwxr-xr-x  1 oracle oinstall  488 Jan  4 11:19 drop_all_table.sh
+-rw-r--r--  1 oracle oinstall   22 Dec 30 20:11 dumpfile_nodata.txt
+-rw-r--r--  1 oracle oinstall  208 Jan  8 15:57 gen_all_parttition.sh
+-rw-r--r--  1 oracle oinstall  387 Jan  7 15:36 get_all_index.sh
+-rwxr-xr-x  1 oracle oinstall   33 Jan  3 20:09 grant_select_to_readonly.sh
+-rwxr-xr-x  1 oracle oinstall  539 Jan  2 17:09 grant_select_to_user.sh
+-rwxr-xr-x  1 oracle oinstall  125 Jan  4 20:36 import_add_data.sh
+-rwxr-xr-x  1 oracle oinstall   86 Jan  3 21:04 import_data.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:19 import_investment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_lb_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 17:20 import_ln_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_ol_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 14:23 import_payment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:20 import_public_all.sh
+-rwxr-xr-x  1 oracle oinstall  278 Dec 30 21:10 import_to_ibank_nodata.sh
+-rwxr-xr-x  1 oracle oinstall  290 Dec 30 21:49 import_to_ibanktest_nodata.sh
+-rwxr-xr-x  1 oracle oinstall 8600 Jan  4 17:03 killutf
+-rw-r--r--  1 oracle oinstall 1306 Jan  4 17:12 killutf.c
+-rwxr-xr-x  1 oracle oinstall 2106 Jan  4 19:58 launch.ksh
+drwxr-xr-x  2 oracle oinstall 4096 Jan  4 11:18 log
+-rwxr-xr-x  1 oracle oinstall  626 Jan  4 10:34 package_product.sh
+-rwxr-xr-x  1 oracle oinstall   64 Jan  6 21:14 runOnAll.sh
+-rwxr-xr-x  1 oracle oinstall  579 Jan  4 16:50 runsql.sh
+-rw-r--r--  1 oracle oinstall  388 Jan  4 17:09 run.txt
+-rw-r--r--  1 oracle oinstall  451 Jan  4 11:16 run_txt.old
+drwxr-xr-x  7 oracle oinstall 4096 Jan  3 21:03 sql
+drwxr-xr-x 12 oracle oinstall 4096 Jan  3 20:24 sql.old
+drwxr-xr-x  2 oracle oinstall 4096 Jan  8 16:35 tmp
+[oracle@HQxTAL3A runner]$ vi alldbuser.txt
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dbuser.txt             get_all_index.sh              import_data.sh*            import_ol_all.sh*           import_to_ibanktest_nodata.
+alldbuseronly.txt     drop_all_table.sh*     grant_select_to_readonly.sh*  import_investment_all.sh*  import_payment_all.sh*      killutf*                   
+alldbuser.txt         dumpfile_nodata.txt    grant_select_to_user.sh*      import_lb_all.sh*          import_public_all.sh*       killutf.c                  
+create_all_table.sh*  gen_all_parttition.sh  import_add_data.sh*           import_ln_all.sh*          import_to_ibank_nodata.sh*  launch.ksh*                
+[oracle@HQxTAL3A runner]$ runOnAll.sh sql/ADD/20140109-18/insertCP_PARAM20140109.sql
+File:[sql/ADD/20140109-18/insertCP_PARAM20140109.sql] has UTF BOM,kill BOM!
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM20140109.sql...[20140109171828]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:18:28 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171828]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM20140109.sql...[20140109171828]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:18:28 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171828]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM20140109.sql...[20140109171828]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:18:28 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171828]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM20140109.sql...[20140109171828]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:18:28 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171829]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM20140109.sql...[20140109171829]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:18:29 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171829]
+[oracle@HQxTAL3A runner]$ runOnAll.sh sql/ADD/20140109-18/insertCP_PARAM201401091702.sql
+File:[sql/ADD/20140109-18/insertCP_PARAM201401091702.sql] has UTF BOM,kill BOM!
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM201401091702.sql...[20140109171909]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:19:09 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171909]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM201401091702.sql...[20140109171909]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:19:09 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171909]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM201401091702.sql...[20140109171910]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:19:10 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171910]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM201401091702.sql...[20140109171910]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:19:10 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171910]
+OK.Excute sql/ADD/20140109-18/insertCP_PARAM201401091702.sql...[20140109171910]
+
+SQL*Plus: Release 11.2.0.3.0 Production on Thu Jan 9 17:19:10 2014
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Real Application Clusters and Automatic Storage Management options
+Over [20140109171910]
+[oracle@HQxTAL3A runner]$ pwd
+/home/oracle/cks/runner
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dbuser.txt             get_all_index.sh              import_data.sh*            import_ol_all.sh*           import_to_ibanktest_nodata.
+alldbuseronly.txt     drop_all_table.sh*     grant_select_to_readonly.sh*  import_investment_all.sh*  import_payment_all.sh*      killutf*                   
+alldbuser.txt         dumpfile_nodata.txt    grant_select_to_user.sh*      import_lb_all.sh*          import_public_all.sh*       killutf.c                  
+create_all_table.sh*  gen_all_parttition.sh  import_add_data.sh*           import_ln_all.sh*          import_to_ibank_nodata.sh*  launch.ksh*                
+[oracle@HQxTAL3A runner]$ l
+total 140
+-rw-r--r--  1 oracle oinstall  347 Jan  7 22:51 2014010722.txt
+-rw-r--r--  1 oracle oinstall   34 Jan  6 21:22 alldbuseronly.txt
+-rw-r--r--  1 oracle oinstall   74 Jan  8 14:27 alldbuser.txt
+-rwxr-xr-x  1 oracle oinstall  123 Jan  4 16:51 create_all_table.sh
+-rw-r--r--  1 oracle oinstall   16 Jan  7 19:48 dbuser.txt
+-rwxr-xr-x  1 oracle oinstall  488 Jan  4 11:19 drop_all_table.sh
+-rw-r--r--  1 oracle oinstall   22 Dec 30 20:11 dumpfile_nodata.txt
+-rw-r--r--  1 oracle oinstall  208 Jan  8 15:57 gen_all_parttition.sh
+-rw-r--r--  1 oracle oinstall  387 Jan  7 15:36 get_all_index.sh
+-rwxr-xr-x  1 oracle oinstall   33 Jan  3 20:09 grant_select_to_readonly.sh
+-rwxr-xr-x  1 oracle oinstall  539 Jan  2 17:09 grant_select_to_user.sh
+-rwxr-xr-x  1 oracle oinstall  125 Jan  4 20:36 import_add_data.sh
+-rwxr-xr-x  1 oracle oinstall   86 Jan  3 21:04 import_data.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:19 import_investment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_lb_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 17:20 import_ln_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_ol_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 14:23 import_payment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:20 import_public_all.sh
+-rwxr-xr-x  1 oracle oinstall  278 Dec 30 21:10 import_to_ibank_nodata.sh
+-rwxr-xr-x  1 oracle oinstall  290 Dec 30 21:49 import_to_ibanktest_nodata.sh
+-rwxr-xr-x  1 oracle oinstall 8600 Jan  4 17:03 killutf
+-rw-r--r--  1 oracle oinstall 1306 Jan  4 17:12 killutf.c
+-rwxr-xr-x  1 oracle oinstall 2106 Jan  4 19:58 launch.ksh
+drwxr-xr-x  2 oracle oinstall 4096 Jan  4 11:18 log
+-rwxr-xr-x  1 oracle oinstall  626 Jan  4 10:34 package_product.sh
+-rwxr-xr-x  1 oracle oinstall   64 Jan  6 21:14 runOnAll.sh
+-rwxr-xr-x  1 oracle oinstall  579 Jan  4 16:50 runsql.sh
+-rw-r--r--  1 oracle oinstall  388 Jan  4 17:09 run.txt
+-rw-r--r--  1 oracle oinstall  451 Jan  4 11:16 run_txt.old
+drwxr-xr-x  7 oracle oinstall 4096 Jan  3 21:03 sql
+drwxr-xr-x 12 oracle oinstall 4096 Jan  3 20:24 sql.old
+drwxr-xr-x  2 oracle oinstall 4096 Jan  8 16:35 tmp
+[oracle@HQxTAL3A runner]$ vi run.txt
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dbuser.txt             get_all_index.sh              import_data.sh*            import_ol_all.sh*           import_to_ibanktest_nodata.
+alldbuseronly.txt     drop_all_table.sh*     grant_select_to_readonly.sh*  import_investment_all.sh*  import_payment_all.sh*      killutf*                   
+alldbuser.txt         dumpfile_nodata.txt    grant_select_to_user.sh*      import_lb_all.sh*          import_public_all.sh*       killutf.c                  
+create_all_table.sh*  gen_all_parttition.sh  import_add_data.sh*           import_ln_all.sh*          import_to_ibank_nodata.sh*  launch.ksh*                
+[oracle@HQxTAL3A runner]$ l
+total 140
+-rw-r--r--  1 oracle oinstall  347 Jan  7 22:51 2014010722.txt
+-rw-r--r--  1 oracle oinstall   34 Jan  6 21:22 alldbuseronly.txt
+-rw-r--r--  1 oracle oinstall   74 Jan  8 14:27 alldbuser.txt
+-rwxr-xr-x  1 oracle oinstall  123 Jan  4 16:51 create_all_table.sh
+-rw-r--r--  1 oracle oinstall   16 Jan  7 19:48 dbuser.txt
+-rwxr-xr-x  1 oracle oinstall  488 Jan  4 11:19 drop_all_table.sh
+-rw-r--r--  1 oracle oinstall   22 Dec 30 20:11 dumpfile_nodata.txt
+-rw-r--r--  1 oracle oinstall  208 Jan  8 15:57 gen_all_parttition.sh
+-rw-r--r--  1 oracle oinstall  387 Jan  7 15:36 get_all_index.sh
+-rwxr-xr-x  1 oracle oinstall   33 Jan  3 20:09 grant_select_to_readonly.sh
+-rwxr-xr-x  1 oracle oinstall  539 Jan  2 17:09 grant_select_to_user.sh
+-rwxr-xr-x  1 oracle oinstall  125 Jan  4 20:36 import_add_data.sh
+-rwxr-xr-x  1 oracle oinstall   86 Jan  3 21:04 import_data.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:19 import_investment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_lb_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 17:20 import_ln_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_ol_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 14:23 import_payment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:20 import_public_all.sh
+-rwxr-xr-x  1 oracle oinstall  278 Dec 30 21:10 import_to_ibank_nodata.sh
+-rwxr-xr-x  1 oracle oinstall  290 Dec 30 21:49 import_to_ibanktest_nodata.sh
+-rwxr-xr-x  1 oracle oinstall 8600 Jan  4 17:03 killutf
+-rw-r--r--  1 oracle oinstall 1306 Jan  4 17:12 killutf.c
+-rwxr-xr-x  1 oracle oinstall 2106 Jan  4 19:58 launch.ksh
+drwxr-xr-x  2 oracle oinstall 4096 Jan  4 11:18 log
+-rwxr-xr-x  1 oracle oinstall  626 Jan  4 10:34 package_product.sh
+-rwxr-xr-x  1 oracle oinstall   64 Jan  6 21:14 runOnAll.sh
+-rwxr-xr-x  1 oracle oinstall  579 Jan  4 16:50 runsql.sh
+-rw-r--r--  1 oracle oinstall  388 Jan  4 17:09 run.txt
+-rw-r--r--  1 oracle oinstall  451 Jan  4 11:16 run_txt.old
+drwxr-xr-x  7 oracle oinstall 4096 Jan  3 21:03 sql
+drwxr-xr-x 12 oracle oinstall 4096 Jan  3 20:24 sql.old
+drwxr-xr-x  2 oracle oinstall 4096 Jan  8 16:35 tmp
+[oracle@HQxTAL3A runner]$ vi launch.ksh
+[oracle@HQxTAL3A runner]$ ksh launch.ksh
+===============================================
+(1/9)drop_all_table.sh[CMD]:DROP_ALL_TABLE
+(2/9)create_all_table.sh[CMD]:CREATE_ALL_TABLE
+(3/9)import_public_all.sh[CMD]:IMPORT_CP_ALL_DATA
+(4/9)import_investment_all.sh[CMD]:IMPORT_WI_ALL_DATA
+(5/9)import_ol_all.sh[CMD]:IMPORT_OL_ALL_DATA
+(6/9)import_lb_all.sh[CMD]:IMPORT_LB_ALL_DATA
+(7/9)import_ln_all.sh[CMD]:IMPORT_LN_ALL_DATA
+(8/9)import_payment_all.sh[CMD]:IMPORT_EP_ALL_DATA
+(9/9)import_add_data.sh[CMD]:IMPORT_ADD_ALL_DATA
+
+======================================
+
+Please input [Y] to continue,press any key exit...\c
+Y
+OK! Now sleep 2 sec...
+Log=log/launch_20140109172311.log
+
+Ready to excute[1:9]===DROP_ALL_TABLE:drop_all_table.sh===
+Press enter to continue,press [i] to skip\c
+i
+
+Ready to excute[2:9]===CREATE_ALL_TABLE:create_all_table.sh===
+Press enter to continue,press [i] to skip\c
+i
+
+Ready to excute[3:9]===IMPORT_CP_ALL_DATA:import_public_all.sh===
+Press enter to continue,press [i] to skip\c
+i
+
+Ready to excute[4:9]===IMPORT_WI_ALL_DATA:import_investment_all.sh===
+Press enter to continue,press [i] to skip\c
+i
+
+Ready to excute[5:9]===IMPORT_OL_ALL_DATA:import_ol_all.sh===
+Press enter to continue,press [i] to skip\c
+now kill 2330
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dumpfile_nodata.txt           import_data.sh*            import_public_all.sh*           log/                 sql/
+alldbuseronly.txt     gen_all_parttition.sh         import_investment_all.sh*  import_to_ibank_nodata.sh*      package_product.sh*  sql.old/
+alldbuser.txt         get_all_index.sh              import_lb_all.sh*          import_to_ibanktest_nodata.sh*  runOnAll.sh*         tmp/
+create_all_table.sh*  grant_select_to_readonly.sh*  import_ln_all.sh*          killutf*                        runsql.sh*
+dbuser.txt            grant_select_to_user.sh*      import_ol_all.sh*          killutf.c                       run.txt
+drop_all_table.sh*    import_add_data.sh*           import_payment_all.sh*     launch.ksh*                     run_txt.old
+[oracle@HQxTAL3A runner]$ 
+[oracle@HQxTAL3A runner]$ vi runOnAll.sh
+[oracle@HQxTAL3A runner]$ vi import_lb.sh
+[oracle@HQxTAL3A runner]$ vi import_lb_all.sh
+[oracle@HQxTAL3A runner]$ vi import_data.sh
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dumpfile_nodata.txt           import_data.sh*            import_public_all.sh*           log/                 sql/
+alldbuseronly.txt     gen_all_parttition.sh         import_investment_all.sh*  import_to_ibank_nodata.sh*      package_product.sh*  sql.old/
+alldbuser.txt         get_all_index.sh              import_lb_all.sh*          import_to_ibanktest_nodata.sh*  runOnAll.sh*         tmp/
+create_all_table.sh*  grant_select_to_readonly.sh*  import_ln_all.sh*          killutf*                        runsql.sh*
+dbuser.txt            grant_select_to_user.sh*      import_ol_all.sh*          killutf.c                       run.txt
+drop_all_table.sh*    import_add_data.sh*           import_payment_all.sh*     launch.ksh*                     run_txt.old
+[oracle@HQxTAL3A runner]$ l
+total 140
+-rw-r--r--  1 oracle oinstall  347 Jan  7 22:51 2014010722.txt
+-rw-r--r--  1 oracle oinstall   34 Jan  6 21:22 alldbuseronly.txt
+-rw-r--r--  1 oracle oinstall   74 Jan  8 14:27 alldbuser.txt
+-rwxr-xr-x  1 oracle oinstall  123 Jan  4 16:51 create_all_table.sh
+-rw-r--r--  1 oracle oinstall   16 Jan  7 19:48 dbuser.txt
+-rwxr-xr-x  1 oracle oinstall  488 Jan  4 11:19 drop_all_table.sh
+-rw-r--r--  1 oracle oinstall   22 Dec 30 20:11 dumpfile_nodata.txt
+-rw-r--r--  1 oracle oinstall  208 Jan  8 15:57 gen_all_parttition.sh
+-rw-r--r--  1 oracle oinstall  387 Jan  7 15:36 get_all_index.sh
+-rwxr-xr-x  1 oracle oinstall   33 Jan  3 20:09 grant_select_to_readonly.sh
+-rwxr-xr-x  1 oracle oinstall  539 Jan  2 17:09 grant_select_to_user.sh
+-rwxr-xr-x  1 oracle oinstall  125 Jan  4 20:36 import_add_data.sh
+-rwxr-xr-x  1 oracle oinstall   86 Jan  3 21:04 import_data.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:19 import_investment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_lb_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 17:20 import_ln_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_ol_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 14:23 import_payment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:20 import_public_all.sh
+-rwxr-xr-x  1 oracle oinstall  278 Dec 30 21:10 import_to_ibank_nodata.sh
+-rwxr-xr-x  1 oracle oinstall  290 Dec 30 21:49 import_to_ibanktest_nodata.sh
+-rwxr-xr-x  1 oracle oinstall 8600 Jan  4 17:03 killutf
+-rw-r--r--  1 oracle oinstall 1306 Jan  4 17:12 killutf.c
+-rwxr-xr-x  1 oracle oinstall 2106 Jan  4 19:58 launch.ksh
+drwxr-xr-x  2 oracle oinstall 4096 Jan  9 17:23 log
+-rwxr-xr-x  1 oracle oinstall  626 Jan  4 10:34 package_product.sh
+-rwxr-xr-x  1 oracle oinstall   64 Jan  6 21:14 runOnAll.sh
+-rwxr-xr-x  1 oracle oinstall  579 Jan  4 16:50 runsql.sh
+-rw-r--r--  1 oracle oinstall  388 Jan  4 17:09 run.txt
+-rw-r--r--  1 oracle oinstall  451 Jan  4 11:16 run_txt.old
+drwxr-xr-x  7 oracle oinstall 4096 Jan  3 21:03 sql
+drwxr-xr-x 12 oracle oinstall 4096 Jan  3 20:24 sql.old
+drwxr-xr-x  2 oracle oinstall 4096 Jan  8 16:35 tmp
+[oracle@HQxTAL3A runner]$ vi run.txt
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dumpfile_nodata.txt           import_data.sh*            import_public_all.sh*           log/                 sql/
+alldbuseronly.txt     gen_all_parttition.sh         import_investment_all.sh*  import_to_ibank_nodata.sh*      package_product.sh*  sql.old/
+alldbuser.txt         get_all_index.sh              import_lb_all.sh*          import_to_ibanktest_nodata.sh*  runOnAll.sh*         tmp/
+create_all_table.sh*  grant_select_to_readonly.sh*  import_ln_all.sh*          killutf*                        runsql.sh*
+dbuser.txt            grant_select_to_user.sh*      import_ol_all.sh*          killutf.c                       run.txt
+drop_all_table.sh*    import_add_data.sh*           import_payment_all.sh*     launch.ksh*                     run_txt.old
+[oracle@HQxTAL3A runner]$ for i in `ls sql/ADD/201lll/*.sql`
+> do
+> echo $i
+> done
+ls: cannot access sql/ADD/201lll/*.sql: No such file or directory
+[oracle@HQxTAL3A runner]$ vi runOnAll.sh
+[oracle@HQxTAL3A runner]$ pwd
+/home/oracle/cks/runner
+[oracle@HQxTAL3A runner]$ l
+total 140
+-rw-r--r--  1 oracle oinstall  347 Jan  7 22:51 2014010722.txt
+-rw-r--r--  1 oracle oinstall   34 Jan  6 21:22 alldbuseronly.txt
+-rw-r--r--  1 oracle oinstall   74 Jan  8 14:27 alldbuser.txt
+-rwxr-xr-x  1 oracle oinstall  123 Jan  4 16:51 create_all_table.sh
+-rw-r--r--  1 oracle oinstall   16 Jan  7 19:48 dbuser.txt
+-rwxr-xr-x  1 oracle oinstall  488 Jan  4 11:19 drop_all_table.sh
+-rw-r--r--  1 oracle oinstall   22 Dec 30 20:11 dumpfile_nodata.txt
+-rw-r--r--  1 oracle oinstall  208 Jan  8 15:57 gen_all_parttition.sh
+-rw-r--r--  1 oracle oinstall  387 Jan  7 15:36 get_all_index.sh
+-rwxr-xr-x  1 oracle oinstall   33 Jan  3 20:09 grant_select_to_readonly.sh
+-rwxr-xr-x  1 oracle oinstall  539 Jan  2 17:09 grant_select_to_user.sh
+-rwxr-xr-x  1 oracle oinstall  125 Jan  4 20:36 import_add_data.sh
+-rwxr-xr-x  1 oracle oinstall   86 Jan  3 21:04 import_data.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:19 import_investment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_lb_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 17:20 import_ln_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 16:43 import_ol_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 30 14:23 import_payment_all.sh
+-rwxr-xr-x  1 oracle oinstall   18 Dec 28 19:20 import_public_all.sh
+-rwxr-xr-x  1 oracle oinstall  278 Dec 30 21:10 import_to_ibank_nodata.sh
+-rwxr-xr-x  1 oracle oinstall  290 Dec 30 21:49 import_to_ibanktest_nodata.sh
+-rwxr-xr-x  1 oracle oinstall 8600 Jan  4 17:03 killutf
+-rw-r--r--  1 oracle oinstall 1306 Jan  4 17:12 killutf.c
+-rwxr-xr-x  1 oracle oinstall 2106 Jan  4 19:58 launch.ksh
+drwxr-xr-x  2 oracle oinstall 4096 Jan  9 17:23 log
+-rwxr-xr-x  1 oracle oinstall  626 Jan  4 10:34 package_product.sh
+-rwxr-xr-x  1 oracle oinstall   64 Jan  6 21:14 runOnAll.sh
+-rwxr-xr-x  1 oracle oinstall  579 Jan  4 16:50 runsql.sh
+-rw-r--r--  1 oracle oinstall  388 Jan  4 17:09 run.txt
+-rw-r--r--  1 oracle oinstall  451 Jan  4 11:16 run_txt.old
+drwxr-xr-x  7 oracle oinstall 4096 Jan  3 21:03 sql
+drwxr-xr-x 12 oracle oinstall 4096 Jan  3 20:24 sql.old
+drwxr-xr-x  2 oracle oinstall 4096 Jan  8 16:35 tmp
+[oracle@HQxTAL3A runner]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd export
+[oracle@HQxTAL3A export]$ lf
+create_directory.sql  export_db_nodata.sh*  export_db_withdata.sh*  export_ibank_withdata.sh*  export_table.sh*  readme.txt
+[oracle@HQxTAL3A export]$ vi export_db_withdata.sh
+
+[1]+  Stopped                 vim export_db_withdata.sh
+[oracle@HQxTAL3A export]$ vi export_db_withdata.sh
+[oracle@HQxTAL3A export]$ vi export_db_nodata.sh
+[oracle@HQxTAL3A export]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd export
+[oracle@HQxTAL3A export]$ lf
+create_directory.sql  export_db_nodata.sh*  export_db_withdata.sh*  export_ibank_withdata.sh*  export_table.sh*  readme.txt
+[oracle@HQxTAL3A export]$ vi export_table.sh
+[oracle@HQxTAL3A export]$ cd ..
+[oracle@HQxTAL3A cks]$ cd import
+[oracle@HQxTAL3A import]$ lf
+import_to_ibank_nodata.sh*  import_to_ibanktest_nodata.sh*  import_to_table.sh*  import_to_test2.sh*  import_to_test4.sh*
+import_to_ibank.sh*         import_to_ibanktest.sh*         import_to_test1.sh*  import_to_test3.sh*  readme.txt
+[oracle@HQxTAL3A import]$ vi import_to_test2.sh
+[oracle@HQxTAL3A import]$ cd ..
+[oracle@HQxTAL3A cks]$ cd export
+[oracle@HQxTAL3A export]$ lf
+create_directory.sql  export_db_nodata.sh*  export_db_withdata.sh*  export_ibank_withdata.sh*  export_table.sh*  readme.txt
+[oracle@HQxTAL3A export]$ vi create_dir*
+[oracle@HQxTAL3A export]$ pwd
+/home/oracle/cks/export
+[oracle@HQxTAL3A export]$ lf
+create_directory.sql  export_db_nodata.sh*  export_db_withdata.sh*  export_ibank_withdata.sh*  export_table.sh*  readme.txt
+[oracle@HQxTAL3A export]$ cd ..
+[oracle@HQxTAL3A cks]$ lf
+dumpdir/  export/  import/  runner/  xiaoh/
+[oracle@HQxTAL3A cks]$ cd runner
+[oracle@HQxTAL3A runner]$ lf
+2014010722.txt        dumpfile_nodata.txt           import_data.sh*            import_public_all.sh*           log/                 sql/
+alldbuseronly.txt     gen_all_parttition.sh         import_investment_all.sh*  import_to_ibank_nodata.sh*      package_product.sh*  sql.old/
+alldbuser.txt         get_all_index.sh              import_lb_all.sh*          import_to_ibanktest_nodata.sh*  runOnAll.sh*         tmp/
+create_all_table.sh*  grant_select_to_readonly.sh*  import_ln_all.sh*          killutf*                        runsql.sh*
+dbuser.txt            grant_select_to_user.sh*      import_ol_all.sh*          killutf.c                       run.txt
+drop_all_table.sh*    import_add_data.sh*           import_payment_all.sh*     launch.ksh*                     run_txt.old
+[oracle@HQxTAL3A runner]$ cd sql
+[oracle@HQxTAL3A sql]$ lf
+ADD/  DATA/  INIT/  other/  PARTITION/
+[oracle@HQxTAL3A sql]$ cd PART*
+[oracle@HQxTAL3A PARTITION]$ lf
+ep_part.sql  test_drop_partition.sql  test_insert.sql  test_part.sql  test_query.sql  test_split.sql  test.sql
+[oracle@HQxTAL3A PARTITION]$ ep_part.sql
+-bash: ./ep_part.sql: Permission denied
+[oracle@HQxTAL3A PARTITION]$ vi ep_part.sql
+[oracle@HQxTAL3A PARTITION]$ vi test_split.sql
+[oracle@HQxTAL3A PARTITION]$ l
+total 72
+-rw-r--r-- 1 oracle oinstall 43754 Jan  8 16:53 ep_part.sql
+-rw-r--r-- 1 oracle oinstall    55 Jan  3 16:30 test_drop_partition.sql
+-rw-r--r-- 1 oracle oinstall  2007 Jan  3 15:32 test_insert.sql
+-rw-r--r-- 1 oracle oinstall  1237 Jan  3 17:14 test_part.sql
+-rw-r--r-- 1 oracle oinstall   115 Jan  3 17:00 test_query.sql
+-rw-r--r-- 1 oracle oinstall  1874 Jan  3 15:34 test_split.sql
+-rw-r--r-- 1 oracle oinstall  7206 Jan  8 16:40 test.sql
+[oracle@HQxTAL3A PARTITION]$ vi test_insert.sql
+[oracle@HQxTAL3A PARTITION]$ lf
+ep_part.sql  test_drop_partition.sql  test_insert.sql  test_part.sql  test_query.sql  test_split.sql  test.sql
+[oracle@HQxTAL3A PARTITION]$ vi test_query.sql
+[oracle@HQxTAL3A PARTITION]$ 

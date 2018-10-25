@@ -1,0 +1,385 @@
+SP2-0734: unknown command beginning "old   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   2:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   2:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   8:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   8:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old  19:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  19:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "'PROMPT"AL..." - rest of line ignored.
+SP2-0042: unknown command "QUERY_SQL" - rest of line ignored.
+SP2-0027: Input is too long (> 2499 characters) - line ignored
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ACTIVITY_LOG"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_AREA"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_BUSI_GROUP"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_BUSI_GROUP_MEMBER"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CODE_INFO"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_COUNTRY"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CREDIT_ACTION_LOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CREDIT_BAT_RULE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CREDIT_OT_RULE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CREDIT_RULE_CYCLE_LOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_CREDIT_RULE_LOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_EMAIL_TASK"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_EMAIL_TASK_ATTATCHMENT"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM IBANKRC.CP_EMAIL_TASK_ATTATCHMENT WHERE  (DATA||TASK_ID||ID||FILE_NAME ) IN ( SELECT DATA||TASK_ID||ID||FILE_NAME FROM IBANKRCPL.CP_EMAIL_TASK_ATTATCHMENT ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM IBANKRC.CP_EMAIL_TASK_ATTATCHMENT) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                                                                                                        *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got BLOB
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_EMAIL_TASK_RECEIVER"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_EMAIL_TEMPLATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_EMAIL_VALIDATE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ENT_CUST_MANAGER"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ENT_INFO"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ENT_TASK"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ERRLOG"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM IBANKRC.CP_ERRLOG WHERE  (BUSI_TRANS_NO||SESSION_ID||LOG_TIMESTAMP||LOG_DATE||ID||EXE_CLASS_NAME||ERROR_DESC||ERROR_CODE ) IN ( SELECT BUSI_TRANS_NO||SESSION_ID||LOG_TIMESTAMP||LOG_DATE||ID||EXE_CLASS_NAME||ERROR_DESC||ERROR_CODE FROM IBANKRCPL.CP_ERRLOG ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM IBANKRC.CP_ERRLOG) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                           *
+ERROR at line 1:
+ORA-01489: result of string concatenation is too long
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ERROR_INFO_COMP"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_GROUP_RESOURCE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_GROUP_USERACCOUNT"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_LOGIN_LOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MAINTENANCE_LOG"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MENU"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MODULE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_ASYN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_BULLETIN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_EMAIL_GROUP"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_FILE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_TEMPLATE"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM IBANKRC.CP_MSG_TEMPLATE WHERE  (DESCRIPTION||WEEKEND_FLAG||TRANS_CODE||TIME_FLAG||TEMPLATE_STATUS||TEMPLATE_NAME||TEMPLATE_CODE||START_TIME2||START_TIME1||SEND_LEVEL||PRODUCT_CODE||MSG_TYPE||MSG_SUBJECT||MSG_CONTENT||MSG_CHANNEL||HOLIDAY_FLAG||END_TIME2||END_TIME1||DISP_LEVEL ) IN ( SELECT DESCRIPTION||WEEKEND_FLAG||TRANS_CODE||TIME_FLAG||TEMPLATE_STATUS||TEMPLATE_NAME||TEMPLATE_CODE||START_TIME2||START_TIME1||SEND_LEVEL||PRODUCT_CODE||MSG_TYPE||MSG_SUBJECT||MSG_CONTENT||MSG_CHANNEL||HOLIDAY_FLAG||END_TIME2||END_TIME1||DISP_LEVEL FROM IBANKRCPL.CP_MSG_TEMPLATE ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM IBANKRC.CP_MSG_TEMPLATE) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                                                                                                                                                                                                                                                                                            *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected - got CLOB
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_MSG_TRANS_REL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ORG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_PARAM"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_PERSON"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_RECHECK_FLOW"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ROLE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ROLE_OPER_REL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_ROLE_TRANS_REL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_SERIAL_TEMPLATE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_SIGN_FIELD_INFO"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_SIGN_FORM_INFO"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_SMS_TASK"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_SMS_TEMPLATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_STAFF"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_STAFF_OPER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_STAFF_ROLE_REL"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_TRADE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_TRANLOGXML"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM IBANKRC.CP_TRANLOGXML WHERE  (TLX_DATE||TLX_TRNCOD||TLX_SEQNO||TLX_SEND||TLX_RECV ) IN ( SELECT TLX_DATE||TLX_TRNCOD||TLX_SEQNO||TLX_SEND||TLX_RECV FROM IBANKRCPL.CP_TRANLOGXML ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM IBANKRC.CP_TRANLOGXML) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                                                                                           *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected - got CLOB
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_TRANS"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_USER_ACCOUNT"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_USER_FILE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_USER_FILE_APPROVE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_USER_WHITE_PAPER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_WEB_GROUP"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_WEB_LOGIN_LOG"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_WEB_RESOURCE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  IBANKRC, Compared table is CP_WEB_TRANS"
+
+  COUNT(*)
+----------
+         0
+

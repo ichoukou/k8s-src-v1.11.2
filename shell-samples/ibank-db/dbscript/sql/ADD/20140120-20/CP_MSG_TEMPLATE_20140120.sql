@@ -1,0 +1,2 @@
+---企业一级实名认证成功后是有发站内信的，但二级的之前没有，增加二级实名认证通过后发消息
+INSERT INTO CP_MSG_TEMPLATE(TEMPLATE_CODE,TEMPLATE_NAME,MSG_SUBJECT,MSG_CONTENT,PRODUCT_CODE,SEND_LEVEL,DISP_LEVEL,TIME_FLAG,START_TIME1,END_TIME1,START_TIME2,END_TIME2,WEEKEND_FLAG,HOLIDAY_FLAG,DESCRIPTION,TEMPLATE_STATUS,MSG_TYPE,MSG_CHANNEL,TRANS_CODE) VALUES ('MSG_CP_017', '企业二级实名认证成功消息', '企业二级实名认证成功', '尊敬的${chineseFullName}：<br/><p>&nbsp;&nbsp;&nbsp; 经过工作人员的认证审核，您提交的企业资料符合要求，恭喜您顺利通过企业审核!</p><p>&nbsp;&nbsp;&nbsp;&nbsp;您的企业实名认证等级达到2级！</p>', 'CP', 3, 3, '0', NULL, NULL, NULL, NULL, '1', NULL, NULL, '1', '04', '1', NULL);

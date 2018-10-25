@@ -1,0 +1,137 @@
+CP	公共
+LN	贷款
+EP	支付
+OL	网购
+WI	理财
+LB	P2P
+
+当前命令
+cks/cks555555@IFBANCK
+
+
+生产结构,初始化
+ibank@VL-Dev-357:~/script/runner> launch.sh all_current.txt
+比较结构
+all_create_sql.sh system/oracle@IFBANCK  IBANKRC  CKS
+
+数据初始化后比较
+all_data_product_init.sh system/admin TEST1
+
+--数据库基线 基线时间2014/02/13
+IBANKP2P/123456@IFBANCK
+ibankrc/123456@IFBANCK
+
+system/oracle@IFBANCK
+
+ibankrcpl/123456@IFBANCK 增量
+数据合并
+oracle@suseora:~/dbscript> merge-test.sh
+1. 
+IBANKP2P/123456@IFBANCK 
+增量脚本
+增量脚本测试环境：
+run_test.txt
+run_add.txt
+run_test_add.txt
+
+ibank@VL-Dev-357:~/script/runner> launch.sh run_add.txt
+
+2.
+ibankrc/123456@IFBANCK
+基线：
+all_test.txt
+system/oracle@IFBANCK
+ibank@VL-Dev-357:~/script/runner> launch.sh all_test.txt ibankrc/123456@IFBANCK
+3.  
+比较以增量为基础，即p2p	
+表比较
+    表结构
+    表数据
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_same.sql system/oracle@IFBANCK log/data_comp_same.log  IBANKRC  IBANKP2P
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_count.sql system/oracle@IFBANCK log/data_count.log  IBANKRC  IBANKP2P
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_detail.sql system/oracle@IFBANCK log/data_comp_detail.log  IBANKRC  IBANKP2P
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_same.sql system/oracle@IFBANCK log/data_comp_same.log  ibankrc  IBANKP2P
+
+
+ibank@VL-Dev-357:~/script/runner> all_launch.sh all_query.txt
+ibank@VL-Dev-357:~/script/runner> all_launch.sh all_query.txt  log/data_comp_detail.txt
+ibank@VL-Dev-357:~/script/runner> all_launch.sh all_query.txt  log/data_count_owner.txt
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_same.sql system/oracle@IFBANCK log/data_comp_same.log  TEST1 IBANKTEST CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_detail.sql system/oracle@IFBANCK log/data_comp_detail.log  TEST1 IBANKTEST CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_count_sub.sql system/oracle@IFBANCK log/data_count_sub.log  IBANKRC  IBANKP2P CP
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh   all_comp_table_contructure.sql system/oracle@IFBANCK log/all_comp_table_contructure_p2p_rc.log IBANKP2P IBANKRC  CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh   all_comp_table_contructure.sql system/oracle@IFBANCK log/all_comp_table_contructure_rc_p2p.log  IBANKRC  IBANKP2P CP
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  all_comp_tab_col.sql system/oracle@IFBANCK log/all_comp_tab_col_rc_p2p.log  IBANKRC  IBANKP2P CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  all_comp_tab_col.sql system/oracle@IFBANCK log/all_comp_tab_col_p2p_rc.log  IBANKP2P IBANKRC CP
+
+比较结构同-111，test2
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh   all_comp_table_contructure.sql system/oracle@IFBANCK log/all_comp_table_contructure_p2p_test2.log IBANKP2P TEST2  CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh   all_comp_table_contructure.sql system/oracle@IFBANCK log/all_comp_table_contructure_test2_p2p.log TEST2 IBANKP2P  CP
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  all_comp_table_pk.sql system/oracle@IFBANCK log/all_comp_table_pk__p2p_rc.log IBANKP2P IBANKRC CP
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  all_comp_table_pk.sql system/oracle@IFBANCK log/all_comp_table_pk_rc_p2p.log  IBANKRC  IBANKP2P CP
+
+3.数据比较
+ibank@VL-Dev-357:~/script/runner> all_launch.sh all_query.txt
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_detail.sql system/oracle@IFBANCK log/data_comp_detail_p2p_rc.log IBANKP2P IBANKRC 
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_comp_same.sql system/oracle@IFBANCK log/data_comp_same_p2p_rc.log IBANKP2P IBANKRC 
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_count.sql system/oracle@IFBANCK log/data_count_p2p_rc.log IBANKP2P IBANKRC 
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_count_owner.sql system/oracle@IFBANCK log/data_count_owner_p2p_rc.log IBANKP2P IBANKRC 
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh data_count_sub.sql system/oracle@IFBANCK log/data_count_sub_p2p_rc.log IBANKP2P IBANKRC 
+
+all_rundba.sh  sql/Current/sql/all_comp_tab_col.sql system/oracle@IFBANCK IBANKP2P IBANKRC CP log/all_comp_tab_col_p2p_rc.log
+
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_tab_col.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_table_contructure.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_table_pk.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_comp_detail.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_comp_same.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_count_sub.sql system/oracle@IFBANCK IBANKP2P IBANKRC
+
+4.基准建立
+增量，比较基础数据
+IBANKRCPL
+全量
+IBANKRC
+
+生成结构
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_table_contructure.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_tab_col.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_table_pk.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/all_comp_table_pk.sql system/oracle@IFBANCK IBANKRC  IBANKRCPL 
+
+比较数据SQL
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_comp_detail.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_comp_same.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_count_sub.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+
+比较数据
+ibank@VL-Dev-357:~/script/runner> all_launch.sh all_query.txt
+
+
+ibank@VL-Dev-357:~/script/runner> all_rundba.sh  sql/Current/sql/data_comp_detail.sql system/oracle@IFBANCK  IBANKRCPL  IBANKRC CP
+
+sql/Current/log_comp/sql/Current/log_comp/data_comp_detail_IBANKRCPL_IBANKRC_IBANKRCPL_IBANKRC_CP.sql
+
+all_create_sql.sh system/oracle@IFBANCK  IBANKRCPL  IBANKRC
+
+all_launch.sh all_query.txt 
+
+
+all_create_sql.sh system/oracle@IFBANCK  IBANKRC  CKS
+
+生产结构,初始化
+ibank@VL-Dev-357:~/script/runner> launch.sh all_current.txt
+比较结构
+all_create_sql.sh system/oracle@IFBANCK  IBANKRC  CKS
+
+http://10.233.94.61:81/svn/互联网金融创新试点工程/01PM项目管理/07PP流程

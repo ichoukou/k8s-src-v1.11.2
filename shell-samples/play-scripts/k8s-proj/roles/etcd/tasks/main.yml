@@ -1,0 +1,44 @@
+---
+
+#########################################################
+###拷贝/soft/tar/etcd-v3.2.4-linux-amd64.tar.gz
+###包到安装目录/soft/local/v1.6.7/etcd
+
+###拷贝/soft/local/k8s-install-script-1.6.7/etcd.sh
+###脚本到安装目录/soft/local/v1.6.7/etcd
+##########################################################
+- name: 安装ETCD
+  file: path={{ etcd_local_dir }}  state=directory owner=root group=root mode=064
+
+- name: 显示安装ETCD
+  shell: ls -l {{ etcd_local_dir }}
+  register: check_out
+
+- name: 创建资源检查
+  #debug: msg="创建ETCD源资源目录 {{check_out.stdout}}"
+  debug: var=check_out verbosity=0
+  
+- name: 拷贝ETCD脚本
+  copy: src={{ etcd_setup_sh_dir }}/{{ etcd_setup_sh_name }} dest={{ etcd_local_dir }}/{{ etcd_setup_sh_name }} owner=root group=root mode=064
+
+- name: 显示ETCD脚本
+  #shell: cat {{ etcd_local_dir }}/{{ etcd_setup_sh_name }}
+  shell:  ls -l  {{ etcd_local_dir }}/{{ etcd_setup_sh_name }}
+  register: check_out
+
+- name: 拷贝ETCD脚本检查
+  #debug: msg="拷贝ETCD {{check_out.stdout}}"
+  debug: var=check_out.stdout_lines verbosity=0
+
+
+- name: 拷贝ETCD包
+  copy: src={{ etcd_gz_src_dir }}/{{ etcd_gz_src_name }} dest={{ etcd_local_dir }}/{{ etcd_gz_src_name }} owner=root group=root mode=064
+
+- name: 显示ETCD包
+  command: ls -l {{ etcd_local_dir }}/{{ etcd_gz_src_name }}
+  register: check_out
+
+- name: 拷贝ETCD包检查
+  #debug: var=check_out verbosity=0
+  debug: var=check_out.stdout_lines verbosity=0
+

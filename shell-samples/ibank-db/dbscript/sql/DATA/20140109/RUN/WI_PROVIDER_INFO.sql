@@ -1,0 +1,2 @@
+﻿INSERT INTO "WI_PROVIDER_INFO" ("PROVIDER_ID", "PROVIDER_NAME", "PROVIDER_DESC", "LOGO", "URL", "PROVIDER_TYPE", "PROVIDER_ACC", "ACC_TYPE", "ACC_NAME", "STATUS", "CS_PHONE_NUM", "PAY_PROVIDER_ID", "MSG_RCV_URL", "PRIVATE_KEY") VALUES ('3276', '农银人寿保险股份有限公司', '农银人寿保险股份有限公司（简称农银人寿）是由中国农业银行股份有限公司、北京中关村科学城建设股份有限公司、中国希格玛有限公司等公司强强合作打造，并在国家工商行政管理总局注册的全国性人寿保险公司。公司总部位于北京，并在北京、浙江、辽宁、山东、福建、湖南、四川、江苏、陕西、河北、湖北和宁波设立了包括15家省级分公司在内的近300家分支机构。', 'img_logo.jpg', NULL, '0', NULL, NULL, NULL, '1', '95581', '800200000003276', 'http://8.0.1.3:7009/axis/abcwx.do', NULL);
+commit;

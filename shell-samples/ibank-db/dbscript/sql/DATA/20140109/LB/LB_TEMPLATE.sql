@@ -1,0 +1,3 @@
+insert into LB_TEMPLATE (TEMPLATE_ID, TITLE, TYPE, VERSION_NUM, STATUS, REMARK, VRF_ID, VRF_TIME, VRF_OPINENT, ENABLE_TIME, DISABLE_TIME, CURRENT_CONT, FILE_ID)
+values ('18C87H4SP001B362E80A000021428151', '1', '1', '0.1', '0', 'ok', 'ABC00000000', '20131220         ', 'ok', '20131220         ', '', '<p style="text-align: center;"><strong>借款协议</strong></p><p>&nbsp;</p><p><strong>甲方（出借人）:${userName}</strong></p><p style="text-align: left;"><strong>项目详情：${projDesc}</strong></p><p><strong>&nbsp;还款计划:</strong></p><p style="text-align: center;"><strong>${repayPlan}</strong></p>', '223236eaa9bb4bf2beb67df806306b8099000001');
+

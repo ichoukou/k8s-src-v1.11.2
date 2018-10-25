@@ -1,0 +1,92 @@
+---
+################################
+#####需要检查版本是否存储######
+###Docker的安装与配置管理
+#- name: 安装Docker
+#  command: "yum install -y docker-engine-1.12.6-1.el7.centos.x86_64"
+#  register: yum_task_result
+#  until: yum_task_result|succeeded
+#  retries: 4
+#  delay: "{{ retry_stagger | random + 3 }}"
+
+- name: 更新缓存(YUM)
+  yum:
+    update_cache: yes
+    name: '*'
+  register: yum_task_result
+  until: yum_task_result|succeeded
+  retries: 4
+  delay: "{{ retry_stagger | random + 3 }}"
+
+- name: 安装Docker
+  command: "yum install -y docker"
+  register: yum_task_result
+  until: yum_task_result|succeeded
+  retries: 4
+  delay: "{{ retry_stagger | random + 3 }}"
+
+#- name: 如果不存在则创建Docker Systemd
+#  file:
+#    path: "{{docker_systemd}}"
+#    state: directory
+
+- name: 如果不存在Dcoker配置目录则创建
+  file:
+    path: "{{docker_conf_dir}}"
+    state: directory
+
+- name: 如果不存在Docker运行时配置目录则创建
+  file:
+    path: "/etc/docker/"
+    state: directory
+
+- name: 拷贝Docker配置文件
+  template:
+    src: docker.config.j2
+    dest: "{{docker_conf_dir}}/docker"
+
+#- name: 拷贝Docker运行时配置文件
+#  template:
+#    src: daemon.json.j2
+#    dest: "/etc/docker/daemon.json"
+
+- name: 拷贝
+  copy: src=daemon.json  dest="/etc/docker/daemon.json" owner=root group=root mode=064
+
+
+- name: 设置Docker的存储目录
+  script: docker.path.sh
+  become: yes
+  become_method: su
+  when: docker_storage_options is defined 
+
+
+- name: 设置Docker为开机启动服务
+  command: "systemctl restart docker"
+  #notify: start docker
+
+
+#- name: 拷贝systemd文件
+#  template:
+#    src: docker.service.j2
+#    dest: "{{docker_systemd}}/docker.service"
+#    owner: root
+#    group: root
+#    mode: 0755
+#  notify: start docker
+
+
+- name: 验证Docker版本
+    You need at least docker version >= 1.12 for resolvconf_mode=docker_dns
+  command: "docker version -f '{{ '{{' }}.Client.Version{{ '}}' }}'"
+  register: docker_version
+  failed_when: docker_version.stdout|version_compare('1.12', '<')
+  changed_when: false
+
+- name: 安装Docker的结果显示
+  debug: msg="Docker安装成功"
+
+- name: 安装版本
+  debug: var=docker_version.stdout_lines verbosity=0
+
+

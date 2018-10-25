@@ -1,0 +1,13 @@
+---
+# 启动集群的基础系统,支持ubuntu, coreos, centos, none
+bootstrap_os: centos
+
+
+## kubernetes使用版本
+kube_version: v1.6.7
+
+# 安装过程中缓存文件下载位置(最少1G)
+local_release_dir: "/tmp/releases"
+# 重试次数，比如下载失败等情况
+retry_stagger: 5
+

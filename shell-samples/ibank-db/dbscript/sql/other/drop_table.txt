@@ -1,0 +1,20 @@
+drop table CP_MSG_TEMPLATE_TEMP         ;
+drop table TEMP_CP_ROLE_TRANS_REL       ;
+drop table TEMP_CP_WEB_RESOURCE_TEST    ;
+drop table CP_TEST_NCLOG                ;
+drop table WI_REFUND_LIST_BAK20131230   ;
+drop table CP_CODE_INFO_TMP             ;
+drop table TEMP_CP_TRANS                ;
+drop table TEMP_CP_ROLE                 ;
+drop table CP_USER_FILE_AUDIT           ;
+drop table WI_ORDER_LIST_BAK20131230    ;
+drop table TEMP_CP_STAFF_ROLE_REL       ;
+drop table TEMP_CP_MODULE               ;
+drop table TEMP_CP_MENU                 ;
+
+
+drop table ACCOUNTS;
+drop table BIG_TABLE;
+drop table EMBARCADERO_EXPLAIN_PLAN;
+drop table EMP;
+drop table DEPT;

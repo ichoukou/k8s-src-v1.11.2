@@ -1,0 +1,412 @@
+SP2-0734: unknown command beginning "old   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   2:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   2:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   8:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   8:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old  19:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  19:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "'PROMPT"AL..." - rest of line ignored.
+SP2-0042: unknown command "QUERY_SQL" - rest of line ignored.
+SP2-0027: Input is too long (> 2499 characters) - line ignored
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ABIS_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCOUNT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_CHANGE_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_FINGER_CODE"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM CKS.EP_ACCT_FINGER_CODE WHERE  (FINGERPRINT9||ACCT_NO||FINGERPRINT0||FINGERPRINT1||FINGERPRINT2||FINGERPRINT3||FINGERPRINT4||FINGERPRINT5||FINGERPRINT6||FINGERPRINT7||FINGERPRINT8 ) IN ( SELECT FINGERPRINT9||ACCT_NO||FINGERPRINT0||FINGERPRINT1||FINGERPRINT2||FINGERPRINT3||FINGERPRINT4||FINGERPRINT5||FINGERPRINT6||FINGERPRINT7||FINGERPRINT8 FROM IBANKRCPL.EP_ACCT_FINGER_CODE ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM CKS.EP_ACCT_FINGER_CODE) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                                                                                                                                                                                                                     *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got BLOB
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_FORPAY"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_FORPAY_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_FREEZE_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_FUNDS"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_LIMIT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_MASTER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_RATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_RATE_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_RECEIVABLE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_SECURE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_TYPE_CODE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ACCT_WHITE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_B2C_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BANK"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BANK_AREA"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BANK_BRANCH"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BIND_CARD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BIND_CARD_LIMIT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_BOEING_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_CARD_BIN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_CARD_HISLOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_CREDIT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_DEPOSIT_ACCT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_EQUAL_BANK_AREA"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ERRLOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ERROR_MAP"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_FUND_SETTLE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_FUND_TRANSFER_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HISTORY_ABIS_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HISTORY_B2C_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HISTORY_BOEING_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HISTORY_INTS_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HISTORY_ORDER_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HIS_DEPOSIT_ACCT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_HIS_MARKET_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ICOIN_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_IGOAL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_INTS_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_MARKET_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_MERCHANTS"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_MERCH_RATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_MISTAKE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_MISTAKE_RECORD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ORDER_LIST"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_ORDER_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_PAY_SECURE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_PROVINCE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_QUICK_PAY_SIGN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_RECON_RECORD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_SECURE_QUESTION"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_SETDATE"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_SYS_ACCT"
+
+  COUNT(*)
+----------
+         1
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TEMP_B2C_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TEMP_DEPOSIT_ACCT_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TEMP_INTS_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TEMP_MARKET_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TEMP_ORDER_TRACE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TRANS_LOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TRANS_TOTAL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is EP_TRANS_TYPE"
+
+  COUNT(*)
+----------
+         0
+

@@ -1,0 +1,3 @@
+data_count_sub_IBANKRCPL_IBANKRC	SQL	sql/Current/log_comp/data_count_sub_IBANKRCPL_IBANKRC.log
+data_comp_detail_IBANKRCPL_IBANKRC	SQL	sql/Current/log_comp/data_comp_detail_IBANKRCPL_IBANKRC.log
+data_comp_same_IBANKRCPL_IBANKRC	SQL	sql/Current/log_comp/data_comp_same_IBANKRCPL_IBANKRC.log.log

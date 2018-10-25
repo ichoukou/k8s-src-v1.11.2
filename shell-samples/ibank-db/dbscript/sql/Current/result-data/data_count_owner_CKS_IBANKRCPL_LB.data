@@ -1,0 +1,280 @@
+SP2-0734: unknown command beginning "old   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   2:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   2:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   8:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   8:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  12:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old  19:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  19:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "'PROMPT"AL..." - rest of line ignored.
+SP2-0042: unknown command "QUERY_SQL" - rest of line ignored.
+SP2-0027: Input is too long (> 2499 characters) - line ignored
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_ATTENT_PROJ"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_ATTENT_USER"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CHECK_ACCT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CHECK_ACCT_EXCEP"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CREDIT_DATA"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CREDIT_DATA_DETAIL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CUST_DEBIT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CUST_LEVEL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_CUST_RATE_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_DOC_CONFIG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_ERRLOG"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LEVEL_PRICE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LIMIT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LIMIT_ADJ_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LIMIT_USE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LIMIT_USE_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_LOSS_RATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PERSON_LIMIT_CTRL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PRICE_BASE_RATE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_BACC_DISCH"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_BRO_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_CONTRACT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_DOC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_INFO"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_INFO_EX"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_OVD_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_PAY"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_PAY_DETAIL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_PROJ_SEAR_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RATE_CARD"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RATE_ITEM"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RATE_ITEM_GROUP"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RATE_ITEM_VALUE"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RATE_LEVEL_REL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RECV_PLAN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_RP_PLAN"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_SUBSC_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_TEMPLATE"
+SELECT COUNT(*) FROM  ( SELECT COUNT(*) COUNT FROM CKS.LB_TEMPLATE WHERE  (CURRENT_CONT||VRF_TIME||VRF_OPINENT||VRF_ID||VERSION_NUM||TYPE||TITLE||TEMPLATE_ID||STATUS||REMARK||FILE_ID||ENABLE_TIME||DISABLE_TIME ) IN ( SELECT CURRENT_CONT||VRF_TIME||VRF_OPINENT||VRF_ID||VERSION_NUM||TYPE||TITLE||TEMPLATE_ID||STATUS||REMARK||FILE_ID||ENABLE_TIME||DISABLE_TIME FROM IBANKRCPL.LB_TEMPLATE ))  SANT_COUNT ,(SELECT COUNT(*) COUNT FROM CKS.LB_TEMPLATE) COMP_COUNT WHERE SANT_COUNT.COUNT<>COMP_COUNT.COUNT
+                                                                                                                                                                                                    *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected - got CLOB
+
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_TEMP_PARAM"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_TEMP_PARAM_REL"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_TRADE_SCALE_LIMIT"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_TRANS_EXCEP_REC"
+
+  COUNT(*)
+----------
+         0
+
+" All Data DB Owne r isIBANKRCPL,  Adding Data DB Owner is  CKS, Compared table is LB_WORK_FLOW"
+
+  COUNT(*)
+----------
+         0
+

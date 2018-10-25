@@ -1,0 +1,11 @@
+---
+
+###
+###拷贝/soft/tar/etcd-v3.2.4-linux-amd64.tar.gz包到安装目录/soft/local/v1.6.7/etcd
+###拷贝/soft/local/k8s-install-script-1.6.7/etcd.sh到安装目录/soft/local/v1.6.7/etcd
+#########包文件位置
+etcd_setup_sh_dir: /soft/local/k8s-install-script-1.6.7
+etcd_setup_sh_name: etcd.sh
+etcd_gz_src_dir: /soft/tar
+etcd_gz_src_name: etcd-v3.2.4-linux-amd64.tar.gz
+etcd_local_dir: /data/soft/local/v1.6.7/etcd

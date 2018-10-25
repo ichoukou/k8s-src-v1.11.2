@@ -1,0 +1,97 @@
+SP2-0734: unknown command beginning "old   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   1: s..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   2:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   2:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   6:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old   9:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new   9:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "old  10:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  10:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "old  17:  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "new  17:  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "'PROMPT"AL..." - rest of line ignored.
+SP2-0042: unknown command "QUERY_SQL" - rest of line ignored.
+SP2-0027: Input is too long (> 2499 characters) - line ignored
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_APPRAISE"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BANNER"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BATCH_FILE"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BATCH_USER"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BLOCK"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BRAND"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_BRAND_PICTURE_RECYCLE"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_ERRLOG"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_FILE_INCOMING"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_FRIENDS"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_LINK_CLICK_RECORD"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_LINK_CODE_REC"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_LINK_SHARE"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_MERCHANTS"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_ORDER_TRACE"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_PRODUCT_COLLECTION"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_SOCIAL_MSG_REC"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_USER_ACTION_REC"
+
+no rows selected
+
+" All Data DB Owne r is IBANKRCPL,  Adding Data DB Owner is  IBANKRC,Compared table is OL_USER_MSG_REC"
+
+no rows selected
+

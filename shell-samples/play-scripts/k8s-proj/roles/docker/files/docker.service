@@ -1,0 +1,30 @@
+[Unit]
+Description=Docker Application Container Engine
+Documentation=http://docs.docker.com
+After=network.target
+#Wants=docker-storage-setup.service
+#Requires=docker-cleanup.timer
+
+[Service]
+Type=notify
+NotifyAccess=all
+EnvironmentFile=-/etc/sysconfig/docker
+ExecStart=/usr/bin/dockerd \
+          $OPTIONS \
+          $DOCKER_STORAGE_OPTIONS \
+          $DOCKER_NETWORK_OPTIONS \
+          $ADD_REGISTRY \
+          $BLOCK_REGISTRY \
+          $INSECURE_REGISTRY\
+          $REGISTRIES
+ExecReload=/bin/kill -s HUP $MAINPID
+LimitNOFILE=1048576
+LimitNPROC=1048576
+LimitCORE=infinity
+TimeoutStartSec=0
+Restart=on-abnormal
+MountFlags=slave
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
