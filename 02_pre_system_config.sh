@@ -56,6 +56,9 @@ EOF
 sudo cp kubernetes.conf  /etc/sysctl.d/kubernetes.conf
 sudo sysctl -p /etc/sysctl.d/kubernetes.conf
 
+sudo sysctl -w net.ipv4.ip_forward=1
+modprobe ip_vs
+
 sed -i 's/.*nproc.*/#&/' /etc/security/limits.d/$NPROC_CONIF
 echo "* soft nproc $NPROC_LIMIT"  >> /etc/security/limits.d/$NPROC_CONIF
 echo "* hard nproc $NPROC_LIMIT"  >> /etc/security/limits.d/$NPROC_CONIF

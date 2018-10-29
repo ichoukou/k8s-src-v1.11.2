@@ -11,14 +11,14 @@ gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors
 EOF
 
 
-cat <<EOF > /etc/yum.repos.d/docker.repo
-[dockerrepo]
-name=Docker Repository
-baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
-enabled=1
-gpgcheck=1
-gpgkey=https://yum.dockerproject.org/gpg
-EOF
+#cat <<EOF > /etc/yum.repos.d/docker.repo
+#[dockerrepo]
+#name=Docker Repository
+#baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+#enabled=1
+#gpgcheck=1
+#gpgkey=https://yum.dockerproject.org/gpg
+#EOF
 
 
 
