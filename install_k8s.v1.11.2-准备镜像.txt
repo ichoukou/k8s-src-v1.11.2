@@ -1,5 +1,32 @@
-获取镜像v1.11.1
+方式1：获取镜像v1.11.1
 images=$(docker images|grep gcr.io |awk '{print $1 ":" $2}');
 #保存镜像
 for kimage in $images ; do docker save -o ${kimage##*/}.tar $kimage ;  done
 
+进入容器内部：
+
+docker exec -t -i 容器名 /bin/bash
+
+
+方式2：安装私有镜像库
+将K8s官方镜像库的几个域名设置为insecure-registry，然后设置hosts使它们指向私有源。
+
+# 所有主机：http私有源配置
+
+# 为Docker配置一下私有源
+mkdir -p /etc/docker
+echo -e '{\n"insecure-registries":["k8s.gcr.io", "gcr.io", "quay.io"]\n}' > /etc/docker/daemon.json
+systemctl restart docker
+ 
+# 此处应当修改为harbor所在机器的IP
+HARBOR_HOST="10.130.38.80"
+# 设置Hosts
+yes | cp /etc/hosts /etc/hosts_bak
+cat /etc/hosts_bak|grep -vE '(gcr.io|harbor.io|quay.io)' > /etc/hosts
+echo """
+$HARBOR_HOST gcr.io harbor.io k8s.gcr.io quay.io """ >> /etc/hosts
+
+# harbor：启动私有镜像
+docker load -i /path/to/k8s-repo-1.12.1
+docker run --restart=always -d -p 80:5000 --name repo harbor.io:1180/system/k8s-repo:v1.12.1
+该镜像库中包含如下镜像，全部来源于官方镜像站。

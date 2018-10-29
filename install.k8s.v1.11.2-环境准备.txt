@@ -7,6 +7,10 @@
 $ sudo hostnamectl set-hostname kube-node1 # 将 kube-node1 替换为当前主机名
 ```
 + 设置的主机名保存在 `/etc/hostname` 文件中；
+# Node 节点
+$ echo "node0.localdomain" > /etc/hostname 
+$ echo "10.236.65.135   node0.localdomain" >> /etc/hosts
+$ sysctl kernel.hostname=node0.localdomain # 不重启情况下使内核修改生效
 
 修改每台机器的 `/etc/hosts` 文件，添加主机名和 IP 的对应关系：
 
@@ -17,6 +21,12 @@ $ sudo hostnamectl set-hostname kube-node1 # 将 kube-node1 替换为当前主�
 $ sudo useradd -m docker
 $ sudo gpasswd -a k8s docker
 $ sudo mkdir -p  /etc/docker/
+
+$ sudo cp /etc/kubernetes/admin.conf $HOME/
+$ sudo chown $(id -u):$(id -g) $HOME/admin.conf
+$ export KUBECONFIG=$HOME/admin.conf
+
+
 $ cat /etc/docker/daemon.json
 {
     "registry-mirrors": ["private.docker.hub:5000"],
@@ -176,7 +186,76 @@ systemctl start ntpdate.service
 /etc/init.d/crond restart
 
 
-```
+
+#功能点3：查看容器的语言环境：
+
+[root@12ec64254bc4 /]# locale
+LANG=
+LC_CTYPE="POSIX"
+LC_NUMERIC="POSIX"
+LC_TIME="POSIX"
+LC_COLLATE="POSIX"
+LC_MONETARY="POSIX"
+LC_MESSAGES="POSIX"
+LC_PAPER="POSIX"
+LC_NAME="POSIX"
+LC_ADDRESS="POSIX"
+LC_TELEPHONE="POSIX"
+LC_MEASUREMENT="POSIX"
+LC_IDENTIFICATION="POSIX"
+LC_ALL=
+
+
+
+查看容器支持的语言：
+
+[root@12ec64254bc4 /]# locale -a
+C
+POSIX
+en_US.utf8
+zh_CN.utf8
+
+
+
+设置字符集为zh.CN.utf8:
+
+[root@12ec64254bc4 zhai]# LANG=zh.CN.utf8
+
+
+
+重新加载环境变量：
+[root@12ec64254bc4 zhai]# source /etc/profile
+
+
+
+再次查看：
+
+[root@12ec64254bc4 zhai]# locale
+LANG=
+LC_CTYPE="zh_CN.UTF-8"
+LC_NUMERIC="zh_CN.UTF-8"
+LC_TIME="zh_CN.UTF-8"
+LC_COLLATE="zh_CN.UTF-8"
+LC_MONETARY="zh_CN.UTF-8"
+LC_MESSAGES="zh_CN.UTF-8"
+LC_PAPER="zh_CN.UTF-8"
+LC_NAME="zh_CN.UTF-8"
+LC_ADDRESS="zh_CN.UTF-8"
+LC_TELEPHONE="zh_CN.UTF-8"
+LC_MEASUREMENT="zh_CN.UTF-8"
+LC_IDENTIFICATION="zh_CN.UTF-8"
+LC_ALL=zh_CN.UTF-8
+
+https://www.kubernetes.org.cn/3808.html
+
+https://blog.csdn.net/aixiaoyang168/article/details/78411511?from=singlemessage&isappinstalled=0
+
+https://blog.csdn.net/watermelonbig/article/details/80879218?from=singlemessage&isappinstalled=0#t9
+
+https://www.jianshu.com/p/6650954fa973
+
+
+
 
 
 

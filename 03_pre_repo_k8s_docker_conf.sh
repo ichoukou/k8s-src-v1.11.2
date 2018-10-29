@@ -20,9 +20,6 @@ gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 EOF
 
-yum update
-sudo yum install -y epel-release
-sudo yum install -y conntrack ipvsadm ipset jq sysstat curl iptables libseccomp
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2 net-tools conntrack-tools wget vim  ntpdate libseccomp libtool-ltdl 
 
 
+#https://blog.csdn.net/zzq900503/article/details/81710319

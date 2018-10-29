@@ -1,0 +1,76 @@
+1.Docker从1.13版本开始调整了默认的防火墙规则，禁用了iptables filter表中FOWARD链，
+这样会引起Kubernetes集群中跨Node的Pod无法通信，因此docker安装完成后，还需要手动修改iptables规则。
+# 编辑systemctl的Docker启动文件
+sed -i "13i ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT" /usr/lib/systemd/system/docker.service
+同时在docker的systemd unit文件中以ExecStartPost加入允许访问的代码，使用命令如下:
+
+# 为docker服务创建一个systemd插件目录
+mkdir -p /etc/systemd/system/docker.service.d
+# 创建一个/etc/systemd/system/docker.service.d/port.conf配置文件
+vi /etc/systemd/system/docker.service.d/port.conf
+输入以下内容,保存退出:
+ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
+
+2.docker的cgroup-driver驱动
+查看docker的cgroup-driver驱动 
+使用命令
+
+docker info
+或者
+docker info | grep -i cgroup
+输出如下:
+Cgroup Driver: cgroupfs
+
+可以看出docker 17.03使用的Cgroup Driver为cgroupfs。
+
+Kubernetes文档中kubelet的启动参数：
+--cgroup-driver string Driver that the kubelet uses to manipulate cgroups on the host.
+Possible values: 'cgroupfs', 'systemd' (default "cgroupfs")
+查看kubelet的配置文件，其中包含如下内容： 
+使用命令
+
+cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+或者
+cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf|grep "cgroup-driver"
+1.11.2版本的封装在/var/lib/kubelet/kubeadm-flags.env文件中 
+使用命令
+
+cat /var/lib/kubelet/kubeadm-flags.env|grep "cgroup-driver"
+如果没找到则是默认的cgroupfs，不需要修改。
+
+如果输出如下则需要修改成一致的方式，即可以修改10-kubeadm.conf中的也可以修改docker的。
+
+KUBELET_CGROUP_ARGS=--cgroup-driver=systemd
+即修改或创建/etc/docker/daemon.json 
+使用命令
+vi /etc/docker/daemon.json
+加入下面的内容：
+{
+  "exec-opts": ["native.cgroupdriver=systemd"]
+}
+
+3.ip_vs待验证
+
+#!/bin/bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+# 确认内核高于4.1后，开启IPVS
+cat > /etc/sysconfig/modules/ipvs.modules <<EOF
+ 
+#!/bin/bash
+ipvs_modules="ip_vs ip_vs_lc ip_vs_wlc ip_vs_rr ip_vs_wrr ip_vs_lblc ip_vs_lblcr ip_vs_dh ip_vs_sh ip_vs_fo ip_vs_nq ip_vs_sed ip_vs_ftp nf_conntrack_ipv4"
+for kernel_module in \${ipvs_modules}; do
+ /sbin/modinfo -F filename \${kernel_module} > /dev/null 2>&1
+ if [ $? -eq 0 ]; then
+ /sbin/modprobe \${kernel_module}
+ fi
+done
+EOF
+chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipvs.modules && lsmod | grep ip_vs
+
+
+
+
+ 
